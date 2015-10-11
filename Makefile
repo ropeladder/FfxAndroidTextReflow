@@ -1,3 +1,5 @@
+VERSION=$(grep em:version "$SRC_DIR"/install.rdf | sed -e 's/<[^>]*>//g')
+VERSION=${VERSION// /} # trim whitespace
 
 all:
 	./mkxpi.sh
@@ -13,11 +15,8 @@ commit: all
 push: commit
 	git push rgh master
 
-add_xpi: all
-	git add -f $(XPI)
-	git commit $(XPI)
 
-release: all add_xpi commit
+release: all commit
 	git tag -a v$(VERSION)
 	git push rgh master
 
