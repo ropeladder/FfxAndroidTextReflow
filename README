@@ -1,0 +1,15 @@
+Click to reflow text to fit screen size on Android. This is a fork and an
+almost exact copy of https://addons.mozilla.org/en-US/android/addon/text-reflow/
+- the difference being that it is enabled for all pageses by default and 
+source code including build script is easier available in
+   https://github.com/rgh36167/FfxAndroidTextReflow
+
+Please see original addon for some more information.
+
+It will reflow one paragraph of text at a time when you tap on it.
+It won't work with hyperlinks or elements which are otherwise clickable.
+You can disable it for a single page in the menu - currently it won't
+remember this setting, or globally simply by disabling the extension.
+
+I will be very happy the day when this addon will be rendered useless 
+by enabling this capability in Firefox!
