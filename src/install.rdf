@@ -4,23 +4,22 @@
      xmlns:em="http://www.mozilla.org/2004/em-rdf#">
 
   <Description about="urn:mozilla:install-manifest">
-    <em:id>text_reflow@indyblue.com</em:id>
+    <em:id>android-text-reflow@rgh36167</em:id>
     <em:version>1.0.1</em:version>
     <em:type>2</em:type>
     <em:bootstrap>true</em:bootstrap>
 
     <em:name>Android Text Reflow</em:name>
-    <em:description>Allow click events to reflow text of that tag to fit screen width</em:description>
-    <em:creator>Richard Z.r</em:creator>
+    <em:description>Allow click events to reflow text to fit screen width</em:description>
+    <em:creator>Richard Z.</em:creator>
 
     <em:targetApplication>
       <!-- Fennec Android -->
       <Description>
-        <em:id>{aa3c5121-dab2-40e2-81ca-7eb35feec930}</em:id>
+        <em:id>{aa3c5121-dab2-40e2-81ca-7ea25febc110}</em:id>
         <em:minVersion>14.0</em:minVersion>
-        <em:maxVersion>45.*</em:maxVersion>
+        <em:maxVersion>45.0</em:maxVersion>
       </Description>
     </em:targetApplication>
-
   </Description>
 </RDF>
