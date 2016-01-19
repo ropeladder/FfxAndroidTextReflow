@@ -18,7 +18,7 @@ commit: all
 	git commit -a || true
 
 push: commit
-	git push rgh master
+	git push rgh v2
 
 add_xpi: all
 	git add -f $(XPI)
