@@ -1,18 +1,50 @@
-Click to reflow text to fit screen size on Android. This is a fork and an
-almost exact copy of https://addons.mozilla.org/en-US/android/addon/text-reflow/
-- the difference being that it is enabled for all pages by default and 
-source code including build script is easier available in
-   https://github.com/rgh36167/FfxAndroidTextReflow
+Click to reflow text to fit screen size on Android. 
 
-Please see original addon for some more information.
 
-It will reflow one paragraph of text at a time when you tap on it.
-It won't work with hyperlinks or elements which are otherwise clickable.
-You can disable it for a single page in the menu - currently it won't
-remember this setting, or globally simply by disabling the extension.
+After pinch to zoom current Firefox versions on Android do not reflow
+text to fit the screen, making excessive horizontal scrolling necessary
+to read the text.
+
+With this extension you can tap the zoomed text and it will be reflowed to
+fit the screen. Normally one chunk of text at a click will be reflowed, 
+though an option to try to reflow a whole column of text exists now. 
+To read a longer text you may have to do this many times to reflow each 
+piece of text separately. 
+
+Clicking the text again will un-reflow it.
+
+To reflow clickable text (hyperlinks) try a double-tap (see options). This addon
+does redefine the double-click event unless this functionality is disabled in
+the settings!
+
+This addon started as fork of 
+  https://addons.mozilla.org/en-US/android/addon/text-reflow/
+
+Differences to the original:
+* enabled by default for all pages
+* tries to reflow more text at a time (see option)
+* configurable side margins
+* options to reflow on double-click and disable default double-click handler
+* option to disable default single-click handler (handy if you click links by accident too often but some things wont work)
+* rewritten to use addon-SDK
+* source code in github https://github.com/rgh36167/FfxAndroidTextReflow
+
+Some settings (options) are configurable in Tools/Addons//AndroidTextReflow.
+All changes to settings take effect only after all pages are reloaded!
+
+Please also see the original addon page for some more information. You may
+also want to use the original addon if you prefer to have click-to-reflow
+disabled by default and only available after enabling it in the menu.
+
+If you find yourself that you need to zoom pages very frequently to make
+them readable you may also try to change the
+ "layout.css.devPixelsPerPx"
+value in "about:config" - a value like 2.4 makes the texts much
+larger. Larger values than that should be used with great caution as
+they may distort many internal configuration pages and menus.
 
 I will be very happy the day when this addon will be rendered obsolete
 by enabling this capability in Firefox!
 
-The addon will be available here:
+The addon is available here:
    https://addons.mozilla.org/en-US/firefox/addon/android-text-reflow/
