@@ -74,7 +74,8 @@ function unloadFromWindow(cWin) {
 	if (!cWin) return;
 	cWin.NativeWindow.menu.remove(cWin.indyblueReflow.menuId);
 	cWin.removeEventListener('click', cWin.indyblueReflow.fnClickEvent);
-	cWin.indyblueReflow = null;
+	delete cWin.indyblueReflow;
+	//cWin.indyblueReflow = null;
 }
 
 // This function toggles checkbox of the menuitem,
@@ -104,7 +105,7 @@ function fnAddReflow(cWin) {
 
 		// how many pixels should be left as margin space
 		// on either side of the text?
-		var sideMargin = 10;
+		var sideMargin = 4;
 
 		// get device width in css pixels
 		var winWidth=win.content.innerWidth;
